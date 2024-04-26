@@ -21,7 +21,7 @@
 
 /* Adds Small Space Before First Tab To Match Top Padding */
 #tabbrowser-tabs {
-    margin-left: 4px !important;
+    margin-left: 6px !important;
 }
 
 /* Sets Right-Padding Of New Tab Button To 0 */

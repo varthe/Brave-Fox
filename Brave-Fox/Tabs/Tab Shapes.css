@@ -33,8 +33,7 @@
 
 /* Adjust Tab Corner Shape */
 .tab-background {
-    border-radius: var(--user-tab-rounding) var(--user-tab-rounding) 0px 0px !important;
-    margin-block: 1px 0 !important;
+    border-radius: 8px !important;
 }
 
 /* Makes New Tab Button Hitbox Not Take Up The Size Of Tab Bar */
@@ -53,50 +52,47 @@
     font-weight: 600 !important;
 }
 
-/* Adds Padding To The Top Of The Browser When Not Maximized */
-:root[sizemode="normal"] #tabbrowser-tabs {
-    padding-top: 8px;
-}
-
-/* Annihilate Padding Between Tabs */
+/* Remove Left Padding Between Tabs */
 .tabbrowser-tab {
-    padding-left: 0 !important;
     padding-right: 0 !important;
 }   
 
 /* Changes Minimum Hight For Tabs [Do Not Touch] */
 #TabsToolbar,
 #tabbrowser-tabs {
-    --tab-min-height: 30px !important;
+    --tab-min-height: 33px !important;
 }
 
 /* Adds's Brave "Like" Tab Dividers */
 /* Thanks u/It_Was_The_Other_Guy */
 /* Thanks Again For Animation Version */
 .tabbrowser-tab::after {
-width: 1px;
-content: "";
-margin-left: 0px;
-display: -moz-box;
-background-image: linear-gradient(
-    transparent 25%,
-    color-mix(in srgb, currentColor 20%, transparent) 10%,
-    color-mix(in srgb, currentColor 20%, transparent) 100%,
-    transparent 80%
-);
-transition: opacity 300ms linear !important;
+    width: 1px;
+    content: "";
+    margin-left: 0px;
+    height: 35px;
+    display: -moz-box;
+    background-image: linear-gradient(
+        transparent 25%,
+        color-mix(in srgb, currentColor 20%, transparent) 10%,
+        color-mix(in srgb, currentColor 20%, transparent) 100%,
+        transparent 80%
+    );
+    transition: opacity 300ms linear !important;
+} 
+
+/* Removes spacers on hover 
+.tabbrowser-tab:not([pinned]):hover::after{
+    display:none;
 }
+*/
+
 
 .tabbrowser-tab[beforehovered]::after,
 .tabbrowser-tab[beforeselected-visible]::after {
     opacity: 0;
 }
 
-/* Remove 1px Gap */
-.tabbrowser-tab:hover::after {
-    width: 0px;
-    transition: width 350ms linear !important;
-}
 
 /* Hides Separator On Selected Tabs */
 .tabbrowser-tab[selected]::after {
@@ -111,7 +107,7 @@ transition: opacity 300ms linear !important;
 
 /* Makes Tabs Have A Bigger Max Size To Match Brave's */
 .tabbrowser-tab[fadein]:not([pinned]) {  
-    max-width: 245px !important;
+    max-width: 235px !important;
 }
 
 
