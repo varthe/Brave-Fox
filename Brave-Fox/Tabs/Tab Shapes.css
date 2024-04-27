@@ -70,7 +70,7 @@
     width: 1px;
     content: "";
     margin-left: 3px;
-    height: 35px;
+    height: 33px;
     display: -moz-box;
     background-image: linear-gradient(
         transparent 25%,
@@ -94,8 +94,11 @@
 
 /* Make Pinned Tabs Have One Size No Matter How Many Tabs Are Open */
 .tabbrowser-tab[pinned] {  
-    max-width: 35px !important;
-    min-width: 35px !important;
+    width: 37px !important;
+}
+/* Position icon center on pinned tab */
+.tabbrowser-tab[pinned] .tab-icon-image {
+    margin-left: -2px;
 }
 
 /* Makes Tabs Have A Bigger Max Size To Match Brave's */
