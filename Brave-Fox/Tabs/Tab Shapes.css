@@ -94,7 +94,9 @@
 
 /* Make Pinned Tabs Have One Size No Matter How Many Tabs Are Open */
 .tabbrowser-tab[pinned] {  
-    width: 37px !important;
+    min-width: 37px !important;
+    max-width: 37px !important;
+
 }
 /* Position icon center on pinned tab */
 .tabbrowser-tab[pinned] .tab-icon-image {
