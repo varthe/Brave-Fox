@@ -12,11 +12,8 @@
 /* Makes Hovering Over Inactive Tabs Have A Small Fade In */
 /* Thanks u/poorman3333 */
 .tabbrowser-tab:hover > .tab-stack > .tab-background:not([selected="true"]) {
-    transition: 300ms !important;
+    transition: 300ms;
 }
-
-/* Toolbar Button Fade In Animations */
-/* Thanks u/9hp71n */
 
 /* Shield Icon */
 #tracking-protection-icon-container:not([disabled="true"], [checked], [open], :active),
@@ -32,7 +29,7 @@ toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active) > .t
 
 /* Star / Bookmark Button */
 .urlbar-page-action, #urlbar-go-button, .search-go-button:not([disabled="true"], [checked], [open], :active) {
-    transition:background linear 250ms;
+    transition: background linear 250ms;
 }
 
 /* Pin / Un-Pin Tab Animation    */
